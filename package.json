@@ -1,0 +1,25 @@
+{
+  "name": "webpack-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --entry ./index.js --output ./bundle.js --mode development",
+    "build:local":"webpack --mode production",
+    "build:external": "webpack --config ./external/webpack.config.js"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Cutshadows/webpack-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cutshadows/webpack-4/issues"
+  },
+  "homepage": "https://github.com/Cutshadows/webpack-4#readme",
+  "devDependencies": {
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10"
+  }
+}
