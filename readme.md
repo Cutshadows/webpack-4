@@ -98,7 +98,7 @@ para observar los cambios en tiempo real
 
 `npm install -D --save-exact webpack-dev-server ` plugin parecido al nodemon
 
-#para integracion de 
+# para integracion de webpack y hot reloaded
 
 const webpack=require('webpack')
 
@@ -108,6 +108,41 @@ const webpack=require('webpack')
         port:9000
     },
 new webpack.HotModuleReplacementPlugin(),`
+
+# Integracion de Babel para transpilar el codigo javascript para que soporte cualquier navegador.
+
+> `rules:[
+            {
+                test:/\.js$/,
+                use:'babel-loader', //ya no sirve por que tenemos el loader de la clase MiniCSSExtractPlugin
+                exclude:/node_modules/ //excluye el directorio de node_modules
+            }
+            //puedo poner objetos o solo text
+        ],`
+
+## integrar babel se require crear un archivo que se llame **`.babelrc`**
+
+dentro de ese archivo se configura
+
+> `{
+  "presets": [
+      "preset-env"
+  ]  
+}`
+
+
+## Para hacer uso de la configuracion de babel se debe instalar el siguiente **npm** 
+
+> `npm install --save-dev --save-exact @babel/core babel-loader @babel/preset-env`
+
+### @babel/plugin-transform-runtime
+> `npm install --save-dev --save-exact @babel/plugin-transform-runtime`
+
+### core de @babel/runtime
+
+> `npm install --save --save-exact @babel/runtime`
+
+
 
 
 
