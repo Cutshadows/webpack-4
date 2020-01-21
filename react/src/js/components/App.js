@@ -13,7 +13,7 @@ function App(){
         <div >
             que linda aplicacion hecha en React.js
             <ul>{
-                loaderList.map(item=><Loader data={item} key={item.id} />)
+                loaderList.map(item=><Loader {...item} key={item.id} />)
             }
             </ul>
             <button onClick={handleClick}>Mostrar lo aprendido hasta el momento</button>

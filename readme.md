@@ -152,6 +152,34 @@ dentro de ese archivo se configura
 ## componentes se escriben en Mayusculas
 
 
+## url Loader para el manejo de archivos
+>`npm install --save-dev --save-exact url-loader`
+### se configura en el webpack.config.js agregando a los modulos 
+
+
+>`module:{
+        rules:[
+            {
+            test:/\.jpg|png|woff|gif|eot|ttf|svg|mp4|webm$/, //regex para el formato que acepta la carga 
+            use:{
+                loader:'url-loader',
+                options:{
+                    limit:90000,  //va a aceptar tamaño de archivos hasta 9000 de tamaño
+                }
+            },
+        }
+    ]
+ }`
+
+## como **url-loader** no es el unico complemento que se dedica a manejo de archivos se le debe instalar **file-loader** para la manipulacion 
+> `npm install --save-dev --save-exact file-loader`
+
+
+# Quede en el video 15
+
+
+
+## React.js es una libreria de javascript para construir interfaces de usuarios
 
 
 

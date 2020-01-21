@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Loader(props){
+function Loader({name}){
     return(
-        <li>{props.data.name}</li>
+        <li>{name}</li>
+
     )
 }
 export default Loader
+
+/**
+ * al desglosar el props se puede obtener solo el nombre en especifico
+ */
