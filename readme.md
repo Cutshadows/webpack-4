@@ -126,7 +126,7 @@ dentro de ese archivo se configura
 
 > `{
   "presets": [
-      "preset-env"
+      "preset-env"  *solo soporta lenguaje javascript moderno 
   ]  
 }`
 
@@ -141,6 +141,15 @@ dentro de ese archivo se configura
 ### core de @babel/runtime
 
 > `npm install --save --save-exact @babel/runtime`
+
+### instalar @babel/preset-react
+> `npm install --save-dev --save-exact @babel/preset-react`
+
+# instalar dependencias del core de react
+> `npm install --save --save-exact react react-dom `
+
+>## trae un error en la version 7.16
+## componentes se escriben en Mayusculas
 
 
 
